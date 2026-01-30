@@ -18,7 +18,7 @@
       }                                                                                      
       .container { padding: 20px; }                                                          
       h1 { font-size: 24px; margin-bottom: 10px; }                                           
-      p { color: #888; margin-bottom: 30px; }                                                
+      p { color: #888; margin-bottom: 20px; }                                                
       .btn {                                                                                 
         background: linear-gradient(135deg, #f97316, #ea580c);                               
         color: white;                                                                        
@@ -27,22 +27,30 @@
         text-decoration: none;                                                               
         font-weight: 600;                                                                    
         display: inline-block;                                                               
+        margin: 8px;                                                                         
+      }                                                                                      
+      .btn-secondary {                                                                       
+        background: #333;                                                                    
       }                                                                                      
     </style>                                                                                 
     <script>                                                                                 
-      // Try to open the app via custom URL scheme                                           
-      const params = window.location.search;                                                 
-      window.location.href = "eship://add" + params;                                         
-      // If app isn't installed, this fails silently and user sees the page                  
+      function getAppLink() {                                                                
+        return "eship://add" + window.location.search;                                       
+      }                                                                                      
+      // Set the open button href dynamically                                                
+      document.addEventListener('DOMContentLoaded', function() {                             
+        document.getElementById('openBtn').href = getAppLink();                              
+      });                                                                                    
     </script>                                                                                
   </head>                                                                                    
   <body>                                                                                     
     <div class="container">                                                                  
       <h1>📦 eShip</h1>                                                                      
       <p>Track this package in eShip</p>                                                     
-      <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Download eShip</a> 
-      <p style="color: #555; font-size: 12px; margin-top: 20px;">Already have eShip? The app 
-  should open automatically.</p>                                                             
+      <a id="openBtn" class="btn" href="#">Open in eShip</a>                                 
+      <br>                                                                                   
+      <a class="btn btn-secondary"                                                           
+  href="https://apps.apple.com/app/eship/id0000000000">Download eShip</a>                    
     </div>                                                                                   
   </body>                                                                                    
-  </html>              
+  </html>                                                 
