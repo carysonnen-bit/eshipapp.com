@@ -3,7 +3,7 @@
   <head>                                                                                     
     <meta charset="UTF-8">                                                                   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">                   
-    <title>Opening eShip...</title>                                                          
+    <title>Add Package to eShip</title>                                                      
     <style>                                                                                  
       body {                                                                                 
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;                          
@@ -27,21 +27,18 @@
         text-decoration: none;                                                               
         font-weight: 600;                                                                    
         display: inline-block;                                                               
+        margin: 10px;                                                                        
       }                                                                                      
-      .subtext { color: #666; font-size: 14px; margin-top: 20px; }                           
+      .btn-secondary {                                                                       
+        background: #333;                                                                    
+      }                                                                                      
     </style>                                                                                 
-    <script>                                                                                 
-      // Try to open the app                                                                 
-      const params = window.location.search;                                                 
-      window.location = "eship://add" + params;                                              
-    </script>                                                                                
   </head>                                                                                    
   <body>                                                                                     
     <div class="container">                                                                  
       <h1>📦 eShip</h1>                                                                      
-      <p>Opening package tracker...</p>                                                      
-      <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Get eShip</a>      
-      <p class="subtext">Don't have eShip? Tap the button above.</p>                         
+      <p>Track this package in eShip</p>                                                     
+      <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Download eShip</a> 
     </div>                                                                                   
   </body>                                                                                    
-  </html>              
+  </html>                                         
