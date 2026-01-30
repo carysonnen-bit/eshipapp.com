@@ -28,32 +28,12 @@
         font-weight: 600;                                                                    
         display: inline-block;                                                               
       }                                                                                      
+      .subtext { color: #666; font-size: 14px; margin-top: 20px; }                           
     </style>                                                                                 
     <script>                                                                                 
-      var appOpened = false;                                                                 
-                                                                                             
-      // Detect if user leaves the page (app opened)                                         
-      document.addEventListener('visibilitychange', function() {                             
-        if (document.hidden) {                                                               
-          appOpened = true;                                                                  
-        }                                                                                    
-      });                                                                                    
-                                                                                             
-      // Also detect blur (backup)                                                           
-      window.addEventListener('blur', function() {                                           
-        appOpened = true;                                                                    
-      });                                                                                    
-                                                                                             
       // Try to open the app                                                                 
       const params = window.location.search;                                                 
       window.location = "eship://add" + params;                                              
-                                                                                             
-      // Only redirect to App Store if app didn't open                                       
-      setTimeout(function() {                                                                
-        if (!appOpened) {                                                                    
-          window.location = "https://apps.apple.com/app/eship/id0000000000";                 
-        }                                                                                    
-      }, 1500);                                                                              
     </script>                                                                                
   </head>                                                                                    
   <body>                                                                                     
@@ -61,6 +41,7 @@
       <h1>📦 eShip</h1>                                                                      
       <p>Opening package tracker...</p>                                                      
       <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Get eShip</a>      
+      <p class="subtext">Don't have eShip? Tap the button above.</p>                         
     </div>                                                                                   
   </body>                                                                                    
-  </html>                   
+  </html>              
