@@ -1,0 +1,10 @@
+  "applinks": {                                                                            
+      "apps": [],                                                                            
+      "details": [                                                                           
+        {                                                                                    
+          "appID": "R47MCZ8BVF.Cary.eShip",                                                  
+          "paths": ["/add", "/add/*"]                                                        
+        }                                                                                    
+      ]                                                                                      
+    }                                                                                        
+  }         
