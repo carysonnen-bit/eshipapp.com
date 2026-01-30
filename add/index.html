@@ -1,4 +1,4 @@
-<!DOCTYPE html>                                                                            
+ <!DOCTYPE html>                                                                            
   <html>                                                                                     
   <head>                                                                                     
     <meta charset="UTF-8">                                                                   
@@ -29,13 +29,20 @@
         display: inline-block;                                                               
       }                                                                                      
     </style>                                                                                 
+    <script>                                                                                 
+      // Try to open the app via custom URL scheme                                           
+      const params = window.location.search;                                                 
+      window.location.href = "eship://add" + params;                                         
+      // If app isn't installed, this fails silently and user sees the page                  
+    </script>                                                                                
   </head>                                                                                    
   <body>                                                                                     
     <div class="container">                                                                  
       <h1>📦 eShip</h1>                                                                      
       <p>Track this package in eShip</p>                                                     
       <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Download eShip</a> 
+      <p style="color: #555; font-size: 12px; margin-top: 20px;">Already have eShip? The app 
+  should open automatically.</p>                                                             
     </div>                                                                                   
   </body>                                                                                    
-  </html>                                                                                    
-                                                   
+  </html>              
