@@ -1,0 +1,47 @@
+ <!DOCTYPE html>                                                                            
+  <html>                                                                                     
+  <head>                                                                                     
+    <meta charset="UTF-8">                                                                   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                   
+    <title>Opening eShip...</title>                                                          
+    <style>                                                                                  
+      body {                                                                                 
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;                          
+        background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);                       
+        color: white;                                                                        
+        display: flex;                                                                       
+        justify-content: center;                                                             
+        align-items: center;                                                                 
+        height: 100vh;                                                                       
+        margin: 0;                                                                           
+        text-align: center;                                                                  
+      }                                                                                      
+      .container { padding: 20px; }                                                          
+      h1 { font-size: 24px; margin-bottom: 10px; }                                           
+      p { color: #888; margin-bottom: 30px; }                                                
+      .btn {                                                                                 
+        background: linear-gradient(135deg, #f97316, #ea580c);                               
+        color: white;                                                                        
+        padding: 16px 32px;                                                                  
+        border-radius: 12px;                                                                 
+        text-decoration: none;                                                               
+        font-weight: 600;                                                                    
+        display: inline-block;                                                               
+      }                                                                                      
+    </style>                                                                                 
+    <script>                                                                                 
+      const params = window.location.search;                                                 
+      window.location = "eship://add" + params;                                              
+      setTimeout(function() {                                                                
+        window.location = "https://apps.apple.com/app/eship/id0000000000";                   
+      }, 500);                                                                               
+    </script>                                                                                
+  </head>                                                                                    
+  <body>                                                                                     
+    <div class="container">                                                                  
+      <h1>📦 eShip</h1>                                                                      
+      <p>Opening package tracker...</p>                                                      
+      <a class="btn" href="https://apps.apple.com/app/eship/id0000000000">Get eShip</a>      
+    </div>                                                                                   
+  </body>                                                                                    
+  </html>         
